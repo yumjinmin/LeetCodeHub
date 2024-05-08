@@ -4,8 +4,8 @@ class Solution:
             return 0
         
         volume = 0
-        left, right = 0, len(height) -1 # 0,5
-        left_max, right_max = height[left], height[right] # 4,5
+        left, right = 0, len(height) -1
+        left_max, right_max = height[left], height[right]
         
         while left < right:
             left_max, right_max = max(height[left], left_max), max(height[right], right_max)
