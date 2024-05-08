@@ -4,6 +4,7 @@ class Solution:
         nums.sort()
 
         for i in range(len(nums)-2):
+            # 중복된 값 건너뛰기
             if i > 0 and nums[i] == nums[i-1]:
                 continue
             
@@ -16,7 +17,7 @@ class Solution:
                     right -= 1
                 else:
                     results.append([nums[i], nums[left], nums[right]])
-
+                    # 스킵 처리
                     while left < right and nums[left] == nums[left+1]:
                         left += 1
                     while left > right and nums[right] == nums[right-1]:
