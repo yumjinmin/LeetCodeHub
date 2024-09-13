@@ -6,3 +6,7 @@ def getDataframeSize(players: pd.DataFrame) -> List[int]:
     num_columns = players.shape[1]
     list.extend([num_rows, num_columns])
     return list
+
+def getDataframeSize(players: pd.DataFrame) -> List[int]:
+    [r,c] = players.shape # unpacking
+    return [r,c]
