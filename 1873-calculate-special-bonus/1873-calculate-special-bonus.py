@@ -9,8 +9,4 @@ def calculate_special_bonus(employees: pd.DataFrame) -> pd.DataFrame:
     
     # employee_id와 bonus만 반환
     return employees[['employee_id', 'bonus']].sort_values('employee_id')
-
-def calculate_special_bonus(employees: pd.DataFrame) -> pd.DataFrame:
-    df['bonus'] = ((employees['employee_id'] % 2 != 0) & ~(employees['name'].str.startswith('M')))*employees['salary']
-    df = df[['employee_id', 'bonus']].sort_values(by = 'employee_id')
-    return df
+    
